@@ -18,7 +18,7 @@ document.addEventListener('keydown', e => {
     const blackKeyIndex = BLACK_KEYS.indexOf(key);
     if (whiteKeyIndex > -1) playNote(whiteKeys[whiteKeyIndex]);
     if (blackKeyIndex > -1) playNote(blackKeys[blackKeyIndex]);
-})
+});
 
 function playNote(key) {
     const noteAudio = document.getElementById(key.dataset.note);
@@ -27,5 +27,5 @@ function playNote(key) {
     key.classList.add('active');
     noteAudio.addEventListener('ended', () => {
         key.classList.remove('active');
-    })
-}
+    });
+};
